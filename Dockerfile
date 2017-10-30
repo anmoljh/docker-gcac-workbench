@@ -6,8 +6,6 @@ From bgruening/galaxy-stable:17.05
 
 MAINTAINER Anmol J. Hemrom <anmol.jh@gmail.com>
 
-WORKDIR /galaxy-central
-
 RUN apt-get update && apt-get install -y ed libreadline-dev texlive-base texlive-extra-utils \
     texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex \
     texlive-generic-extra texlive-lang-cjk texlive-plain-extra  build-essential texlive-full \
@@ -15,6 +13,10 @@ RUN apt-get update && apt-get install -y ed libreadline-dev texlive-base texlive
     coinor-libsymphony-dev cdbs coinor-libcgl-dev libopenmpi-dev tcllib libghc-digest-dev \
     node-buffer-crc32 zlib-bin zlibc lua-zlib-dev node-zlib liblz-dev libghc-zlib-dev \
     zlib1g-dev zlib1g-dbg libnlopt-dev && rm -rf /var/lib/apt/lists/*
+
+USER galaxy
+
+WORKDIR /galaxy-central
 
 ADD ./gcac-workbench/tool_list_gcac.yaml $GALAXY_ROOT/tool_list_gcac.yaml 
 ADD ./gcac-workbench/tool_conf_gcac.xml $GALAXY_ROOT/tool_conf_gcac.xml	
@@ -24,7 +26,6 @@ ENV GALAXY_CONFIG_BRAND="GCAC" \
 
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test ToolShed'
 RUN install-tools $GALAXY_ROOT/tool_list_gcac.yaml
-
 
 ADD ./gcac-workbench/gcac-workflow.ga $GALAXY_HOME/workflows/
 RUN startup_lite && sleep 30 && \
