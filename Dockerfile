@@ -14,20 +14,17 @@ RUN apt-get update && apt-get install -y ed libreadline-dev texlive-base texlive
     node-buffer-crc32 zlib-bin zlibc lua-zlib-dev node-zlib liblz-dev libghc-zlib-dev \
     zlib1g-dev zlib1g-dbg libnlopt-dev && rm -rf /var/lib/apt/lists/*
 
-USER $GALAXY_USER
-WORKDIR $GALAXY_ROOT
-
-ADD ./gcac-workbench/tool_list_gcac.yaml $GALAXY_ROOT/tool_list_gcac.yaml 
-ADD ./gcac-workbench/tool_conf_gcac.xml $GALAXY_ROOT/tool_conf_gcac.xml	
-
 ENV GALAXY_CONFIG_BRAND="GCAC" \
     GALAXY_CONFIG_TOOL_CONFIG_FILE=$GALAXY_ROOT/tool_conf_gcac.xml,config/shed_tool_conf.xml 
 
+ADD ./gcac-workbench/tool_list_gcac.yaml $GALAXY_ROOT/tool_list_gcac.yaml 
+ADD ./gcac-workbench/tool_conf_gcac.xml $GALAXY_ROOT/tool_conf_gcac.xml	
+ADD ./gcac-workbench/gcac-workflow.ga $GALAXY_HOME/workflows/
+
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test ToolShed'
 RUN install-tools $GALAXY_ROOT/tool_list_gcac.yaml
-
-ADD ./gcac-workbench/gcac-workflow.ga $GALAXY_HOME/workflows/
-RUN startup_lite && sleep 30 && \
+RUN startup_lite && \
+    sleep 30 && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD	
 
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
