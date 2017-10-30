@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y ed libreadline-dev texlive-base texlive
     node-buffer-crc32 zlib-bin zlibc lua-zlib-dev node-zlib liblz-dev libghc-zlib-dev \
     zlib1g-dev zlib1g-dbg libnlopt-dev && rm -rf /var/lib/apt/lists/*
 
-USER galaxy
+USER $GALAXY_USER
 WORKDIR $GALAXY_ROOT
 
 ADD ./gcac-workbench/tool_list_gcac.yaml $GALAXY_ROOT/tool_list_gcac.yaml 
