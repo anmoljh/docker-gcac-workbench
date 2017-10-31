@@ -1,0 +1,9 @@
+libraries:
+  - name: GCAC test-datasets
+    files:
+     - url: "https://raw.githubusercontent.com/LynnLab-JNU/download_repo/master/GCAC-test-datasets/fontain_actives_with_names.sdf"
+       file_type: sdf
+     - url: "https://raw.githubusercontent.com/LynnLab-JNU/download_repo/master/GCAC-test-datasets/fontain_inactives_with_names.sdf"
+       file_type: sdf
+     - url: "https://raw.githubusercontent.com/LynnLab-JNU/download_repo/master/GCAC-test-datasets/prediction_set.sdf"
+       file_type: sdf
