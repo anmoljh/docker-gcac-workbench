@@ -24,11 +24,11 @@ ADD ./gcac-workbench/gcac-workflow.ga $GALAXY_HOME/workflows/
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test ToolShed'
 RUN install-tools $GALAXY_ROOT/tool_list_gcac.yaml
 
-ADD ./gcac-workbench/data-libraries.yaml $GALAXY_ROOT/data-libraries.yaml
+ADD ./gcac-workbench/data-library.yaml $GALAXY_ROOT/data-library.yaml
 RUN startup_lite && \
     sleep 30 && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
-    setup-data-libraries -i $GALAXY_ROOT/data-libraries.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+    setup-data-libraries   -i $GALAXY_ROOT/data-library.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
