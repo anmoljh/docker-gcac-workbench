@@ -7,7 +7,7 @@
   <label id="gcac_suite" text="GCAC SUITE" />
   <section id="descriptor_calculation" name="Descriptor Calculation">
   </section>
-  <section id="model_builing_and_prediction" name="Model Building and Prediction">
+  <section id="model_building_and_prediction" name="Model Building and Prediction">
   </section>
   <section id="candidate_compounds_extraction" name="Candidate Compounds Extraction">
   </section>

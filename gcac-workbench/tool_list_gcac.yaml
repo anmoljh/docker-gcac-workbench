@@ -25,7 +25,7 @@ tools:
   install_resolver_dependencies: False
 - name: 'csv_to_rdata'
   owner: 'anmoljh'
-  tool_panel_section_id: 'model_builing_and_prediction'
+  tool_panel_section_id: 'model_building_and_prediction'
   tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
   revisions:
   - 'd98e0124cb31'
@@ -33,7 +33,7 @@ tools:
   install_resolver_dependencies: False
 - name: 'rcaret_classification_model'
   owner: 'anmoljh'
-  tool_panel_section_id: 'model_builing_and_prediction'
+  tool_panel_section_id: 'model_building_and_prediction'
   tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
   revisions:
   - 'ff7c6f595b70'
@@ -41,7 +41,7 @@ tools:
   install_resolver_dependencies: False
 - name: 'activity_predict'
   owner: 'anmoljh'
-  tool_panel_section_id: 'model_builing_and_prediction'
+  tool_panel_section_id: 'model_building_and_prediction'
   tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
   revisions:
   - 'ca24a7d362b5'       
@@ -49,7 +49,7 @@ tools:
   install_resolver_dependencies: False
 - name: 'feature_selection'
   owner: 'anmoljh'
-  tool_panel_section_id: 'model_builing_and_prediction'
+  tool_panel_section_id: 'model_building_and_prediction'
   tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
   revisions:
   - '246ffbb958df'
