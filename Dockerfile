@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y ed libreadline-dev texlive-base texlive
     fort77 gfortran gnustep-devel node-zlib libpng-dev libpnglite-dev coinor-libcgl-dev \
     coinor-libsymphony-dev cdbs coinor-libcgl-dev libopenmpi-dev tcllib libghc-digest-dev \
     node-buffer-crc32 zlib-bin zlibc lua-zlib-dev node-zlib liblz-dev libghc-zlib-dev \
-    zlib1g-dev zlib1g-dbg libnlopt-dev && rm -rf /var/lib/apt/lists/*
+    zlib1g-dev zlib1g-dbg libnlopt-dev libcairo2-dev && rm -rf /var/lib/apt/lists/*
 
 ENV GALAXY_CONFIG_BRAND="GCAC" \
     GALAXY_CONFIG_TOOL_CONFIG_FILE=$GALAXY_ROOT/tool_conf_gcac.xml,config/shed_tool_conf.xml 
