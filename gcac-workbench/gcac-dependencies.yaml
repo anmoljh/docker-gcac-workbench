@@ -1,0 +1,33 @@
+tools:
+- name: 'package_mayachemtools_9_0'
+  owner: 'anmoljh'
+  tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
+  tool_panel_section_label: 'GCAC SUITE'
+  revisions:
+  - '1384bd058088'
+  install_tool_dependencies: True
+  install_resolver_dependencies: False
+- name: 'package_padeldescriptor_1_0'
+  owner: 'anmoljh'
+  tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
+  tool_panel_section_label: 'GCAC SUITE'
+  revisions:
+  - 'e3002fa72cee'
+  install_tool_dependencies: True
+  install_resolver_dependencies: False
+- name: 'package_carettools_1_0'
+  owner: 'anmoljh'
+  tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
+  tool_panel_section_label: 'GCAC SUITE'
+  revisions:
+  - '1f2bf4fbbc53'
+  install_tool_dependencies: True
+  install_resolver_dependencies: False
+- name: 'package_r_3_2_1'
+  owner: 'iuc'
+  tool_shed_url: 'https://testtoolshed.g2.bx.psu.edu/'
+  tool_panel_section_label: 'GCAC SUITE'
+  revisions:
+  - '77d439695328'
+  install_tool_dependencies: True
+  install_resolver_dependencies: False

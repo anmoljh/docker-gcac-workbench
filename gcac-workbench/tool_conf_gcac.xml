@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<toolbox>
+  <label id="basic_tools" text="Basic Tools"/>
+  <section id="getext" name="Get Data">
+    <tool file="data_source/upload.xml" />
+  </section>
+  <label id="gcac_suite" text="GCAC SUITE" />
+  <section id="descriptor_calculation" name="Descriptor Calculation">
+  </section>
+  <section id="model_building_and_prediction" name="Model Building and Prediction">
+  </section>
+  <section id="candidate_compounds_extraction" name="Candidate Compounds Extraction">
+  </section>
+  <section id="feature_selection" name="Feature Selection">
+  </section>
+</toolbox>
